@@ -62,3 +62,7 @@ gitk
 ```bash
 git init
 ```
+
+### HEAD
+
+正在工作的分支：`ref: refs/heads/temp`
