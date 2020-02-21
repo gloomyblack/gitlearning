@@ -65,4 +65,48 @@ git init
 
 ### HEAD
 
-正在工作的分支：`ref: refs/heads/temp`
+当前仓库正工作在的分支：`ref: refs/heads/temp`
+
+### config
+
+影响git local配置
+
+`[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+        ignorecase = true
+        precomposeunicode = true
+[remote "origin"]
+        url = https://github.com/gloomyblack/gitlearning.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master`
+
+### refs
+
+#### heads
+
+1. master
+   master文件内容：`359015bb6a44cc13be136d4c4b1739e2050bb415`
+   查看其类型
+
+   ```bash
+   git cat-file -t 359015bb
+   # commit
+   ```
+
+2. temp
+   temp文件内容：`5aac26d59397d4386c4132886c49b5f46c4755b5`
+
+#### tags
+
+* temp-version
+  temp-version文件内容：`5aac26d59397d4386c4132886c49b5f46c4755b5`
+
+  ```bash
+  git cat-file -t 5aac26d5
+  # commit
+  ```
